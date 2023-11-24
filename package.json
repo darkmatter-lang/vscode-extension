@@ -1,0 +1,50 @@
+{
+    "name": "darkmatter",
+    "displayName": "%displayName%",
+    "description": "%description%",
+    "version": "0.1.0",
+    "publisher": "Anthony Waldsmith",
+    "license": "MIT",
+    "engines": {
+        "vscode": "0.10.x"
+    },
+    "contributes": {
+        "configurationDefaults": {
+            "[darkmatter]": {
+                "editor.maxTokenizationLineLength": 2500
+            }
+        },
+        "languages": [
+            {
+                "id": "darkmatter",
+                "extensions": [
+                    ".dm",
+                    ".dmx",
+                    ".darkmatter"
+                ],
+                "aliases": [
+                    "Darkmatter",
+                    "darkmatter"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "darkmatter",
+                "scopeName": "source.dm",
+                "path": "./syntaxes/darkmatter.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "darkmatter",
+                "path": "./snippets/darkmatter.code-snippets"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/darkmatter-lang/vscode-extension.git"
+    }
+}
